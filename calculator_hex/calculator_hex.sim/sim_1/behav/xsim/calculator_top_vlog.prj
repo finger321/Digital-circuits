@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../calculator_hex.srcs/sources_1/ip/clk_div" \
+"../../../../calculator_hex.srcs/sources_1/ip/clk_div/clk_div_clk_wiz.v" \
+"../../../../calculator_hex.srcs/sources_1/ip/clk_div/clk_div.v" \
+"../../../../../实验6 十六进制计算器设计/calculator_display.v" \
+"../../../../../实验6 十六进制计算器设计/calculator_hex.v" \
+"../../../../../实验6 十六进制计算器设计/calculator_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

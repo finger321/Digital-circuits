@@ -1,0 +1,68 @@
+###########flowing_water.v
+module flowing_water_lights (
+    input  wire       clk   ,
+	input  wire       rst   ,
+	input  wire       button,
+	output reg  [7:0] led
+	
+);
+reg [31:0]      cnt;
+reg  button2=0; 
+always@(posedge clk or negedge rst)begin
+if (button||button2)
+    if(button2==0)  begin
+    cnt=32'd0;
+    button2<=1;
+    end
+	if (rst)
+		cnt <= 32'd0;                    
+    if (cnt ==32'd3)      
+		cnt <= 32'd0;                     
+	else
+		cnt <= cnt + 32'd1;             
+end
+always@(posedge clk or negedge rst)begin
+  if(button||button2)
+    if(button2==0)begin
+        led<=8'b00000001;
+         button2<=1;
+    end
+	if (rst)  led <= 8'b00000001;                   
+	else if (cnt ==32'd3)     
+		led <= {led[6:0],led[7]};	
+//	else	          太害人了        
+//		led <= led;
+end
+
+endmodule
+////////////////////////////////////////
+pin.xdc
+/////////////////////
+set_property PACKAGE_PIN Y18 [get_ports clk]
+set_property PACKAGE_PIN R1 [get_ports rst]
+set_property PACKAGE_PIN P1 [get_ports button]
+set_property PACKAGE_PIN A21 [get_ports led[0]]
+set_property PACKAGE_PIN E22 [get_ports led[1]]
+set_property PACKAGE_PIN D22 [get_ports led[2]]
+set_property PACKAGE_PIN E21 [get_ports led[3]]
+set_property PACKAGE_PIN D21 [get_ports led[4]]
+set_property PACKAGE_PIN G21 [get_ports led[5]]
+set_property PACKAGE_PIN G22 [get_ports led[6]]
+set_property PACKAGE_PIN F21 [get_ports led[7]]
+
+
+set_property IOSTANDARD LVCMOS33 [get_ports clk]
+set_property IOSTANDARD LVCMOS33 [get_ports rst]
+set_property IOSTANDARD LVCMOS33 [get_ports button]
+set_property IOSTANDARD LVCMOS33 [get_ports led[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports led[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports led[2]]
+set_property IOSTANDARD LVCMOS33 [get_ports led[3]]
+set_property IOSTANDARD LVCMOS33 [get_ports led[4]]
+set_property IOSTANDARD LVCMOS33 [get_ports led[5]]
+set_property IOSTANDARD LVCMOS33 [get_ports led[6]]
+set_property IOSTANDARD LVCMOS33 [get_ports led[7]]
+///////////////////
+clocl.xdc
+//////////////////
+create_clock -name clk -period 10 [get_ports clk]

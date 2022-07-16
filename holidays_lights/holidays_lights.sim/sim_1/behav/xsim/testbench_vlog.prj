@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../holidays_lights.srcs/sources_1/new/holiday_lights.v" \
+"C:/Users/黄指斌/Desktop/实验2 计数器设计/holiday_lights/testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

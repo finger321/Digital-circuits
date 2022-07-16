@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Apr 26 16:04:48 2022
+# Process ID: 1428
+# Current directory: D:/VivadoProject/expriment3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13680 D:\VivadoProject\expriment3\expriment3.xpr
+# Log file: D:/VivadoProject/expriment3/vivado.log
+# Journal file: D:/VivadoProject/expriment3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/VivadoProject/expriment3/expriment3.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/VivadoProject/expriment3/testbench.v
+update_compile_order -fileset sim_1
+launch_simulation
+source booth.tcl
+update_compile_order -fileset sim_1
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+close_sim

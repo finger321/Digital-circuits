@@ -1,0 +1,70 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Apr 26 16:28:15 2022
+# Process ID: 5128
+# Current directory: D:/VivadoProject/expriment3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13084 D:\VivadoProject\expriment3\expriment3.xpr
+# Log file: D:/VivadoProject/expriment3/vivado.log
+# Journal file: D:/VivadoProject/expriment3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/VivadoProject/expriment3/expriment3.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench.tcl
+relaunch_sim
+add_bp {D:/VivadoProject/expriment3/testbench.v} 134
+add_bp {D:/VivadoProject/expriment3/booth.v} 13
+close_sim
+launch_simulation
+source testbench.tcl
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run all
+run all
+close_sim
+launch_simulation
+source testbench.tcl
+remove_bps -file {D:/VivadoProject/expriment3/booth.v} -line 13
+close_sim
+launch_simulation
+source testbench.tcl
+remove_bps -file {D:/VivadoProject/expriment3/testbench.v} -line 134
+run all
+run all
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+set_property -name {xsim.simulate.runtime} -value {1s} -objects [get_filesets sim_1]
+relaunch_sim
+close_sim
+launch_simulation
+source testbench.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source testbench.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source testbench.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source testbench.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source testbench.tcl
+relaunch_sim
+close_sim

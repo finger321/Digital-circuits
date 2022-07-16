@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Nov 16 17:06:00 2021
+# Process ID: 16420
+# Current directory: D:/VivadoProject/flowing_water_lights
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11232 D:\VivadoProject\flowing_water_lights\flowing_water_lights.xpr
+# Log file: D:/VivadoProject/flowing_water_lights/vivado.log
+# Journal file: D:/VivadoProject/flowing_water_lights\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/VivadoProject/flowing_water_lights/flowing_water_lights.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/»ÆÖ¸±ó/Desktop/flowing_water_lights/flowing_water_lights.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/»ÆÖ¸±ó/Desktop/flowing_water_lights/flowing_water_lights.srcs/constrs_1/new/clock.xdc'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/»ÆÖ¸±ó/Desktop/flowing_water_lights/flowing_water_lights.srcs/constrs_1/new/pin.xdc'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/»ÆÖ¸±ó/Desktop/flowing_water_lights/testbench.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 667.074 ; gain = 73.527
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 16 17:08:04 2021...
